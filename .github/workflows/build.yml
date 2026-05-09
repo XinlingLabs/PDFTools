@@ -44,7 +44,7 @@ jobs:
             "-i", "icon.ico",
             "--add-data", "icon.ico;.",
             "--collect-all", "tkinterdnd2",
-            "--name", "PDFTools",
+            "--name", "PDF Tools",
             "pdf_tools.py"
           )
           pyinstaller @params
