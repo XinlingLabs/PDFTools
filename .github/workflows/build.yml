@@ -7,9 +7,6 @@ jobs:
   build:
     runs-on: windows-latest
 
-    env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-
     steps:
       # 1. 升级到 checkout v5 (支持 Node.js 24)
       - name: Checkout
@@ -52,9 +49,9 @@ jobs:
           )
           pyinstaller @params
 
-      # 6. 升级到 upload-artifact v5 (支持 Node.js 24)
+      # 6. 升级到 upload-artifact v7 (支持 Node.js 24)
       - name: Upload EXE
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v7
         with:
           name: PDF Tools
           path: dist/PDF Tools/
