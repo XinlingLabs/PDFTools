@@ -1,4 +1,4 @@
-name: Build EXE
+name: Build PDF Tools
 
 on:
   workflow_dispatch:
@@ -25,7 +25,7 @@ jobs:
 
       # 3. 设置 Python 环境
       - name: Setup Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.11'
 
@@ -53,5 +53,5 @@ jobs:
       - name: Upload EXE
         uses: actions/upload-artifact@v5
         with:
-          name: PDFTools_Folder
+          name: PDF Tools
           path: dist/PDF Tools/
