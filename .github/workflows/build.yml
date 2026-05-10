@@ -7,6 +7,9 @@ jobs:
   build:
     runs-on: windows-latest
 
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
     steps:
       # 1. 升级到 checkout v5 (支持 Node.js 24)
       - name: Checkout
